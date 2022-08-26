@@ -36,10 +36,6 @@ const Header = () => {
 
             <UserImg alt="" src="https://avatars.githubusercontent.com/u/19980847?v=4" />
 
-
-
-
-            Header
         </Nav>
     )
 }
