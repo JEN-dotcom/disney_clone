@@ -2,36 +2,26 @@ import React from 'react'
 
 import styled from 'styled-components'
 
+import {selectMovies} from "../features/movie/movieSlice"
+import { useSelector } from 'react-redux'
+
 
 const Movies = () => {
+
+    const movies = useSelector(selectMovies)
   return (
     <Container>
     <h4>Recommended for you</h4>
     <Content>
-    <Warp>
-        <img src="http://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/6EA416AD3B15FCC1BADC817A932A57FFF707556DB2233FFCB4CFEB7C8EEDE23C/scale?width=400&aspectRatio=1.78&format=jpeg" />
-    </Warp>
-    <Warp>
-        <img src="http://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/6EA416AD3B15FCC1BADC817A932A57FFF707556DB2233FFCB4CFEB7C8EEDE23C/scale?width=400&aspectRatio=1.78&format=jpeg" />
-    </Warp>
-    <Warp>
-        <img src="http://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/6EA416AD3B15FCC1BADC817A932A57FFF707556DB2233FFCB4CFEB7C8EEDE23C/scale?width=400&aspectRatio=1.78&format=jpeg" />
-    </Warp>
-    <Warp>
-        <img src="http://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/6EA416AD3B15FCC1BADC817A932A57FFF707556DB2233FFCB4CFEB7C8EEDE23C/scale?width=400&aspectRatio=1.78&format=jpeg" />
-    </Warp>
-    <Warp>
-        <img src="http://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/6EA416AD3B15FCC1BADC817A932A57FFF707556DB2233FFCB4CFEB7C8EEDE23C/scale?width=400&aspectRatio=1.78&format=jpeg" />
-    </Warp>
-    <Warp>
-        <img src="http://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/6EA416AD3B15FCC1BADC817A932A57FFF707556DB2233FFCB4CFEB7C8EEDE23C/scale?width=400&aspectRatio=1.78&format=jpeg" />
-    </Warp>
-    <Warp>
-        <img src="http://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/6EA416AD3B15FCC1BADC817A932A57FFF707556DB2233FFCB4CFEB7C8EEDE23C/scale?width=400&aspectRatio=1.78&format=jpeg" />
-    </Warp>
-    <Warp>
-        <img src="http://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/6EA416AD3B15FCC1BADC817A932A57FFF707556DB2233FFCB4CFEB7C8EEDE23C/scale?width=400&aspectRatio=1.78&format=jpeg" />
-    </Warp>
+
+    { movies && 
+    movies.map(movie => (
+        <Wrap key={movie.id}>
+            <img src={movie.cardImg}/>
+        </Wrap>
+    ))
+    }
+    
 
     </Content>
     
@@ -55,7 +45,7 @@ const Content = styled.div`
 
 `
 
-const Warp = styled.div`
+const Wrap = styled.div`
     border-radius: 10px;
     cursor: pointer;
     overflow: hidden;

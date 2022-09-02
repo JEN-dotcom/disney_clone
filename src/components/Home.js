@@ -1,18 +1,53 @@
+import { useEffect } from 'react'
+import { collection, getDocs } from "firebase/firestore";
+
+
+
 import styled from 'styled-components'
 import ImgSlider from './ImgSlider'
 import Movies from './Movies'
 import Viewers from './Viewers'
+import db from '../firebase'
+import { useDispatch} from "react-redux"
+import { setMovies } from '../features/movie/movieSlice';
+
 
 
 const Home = () => {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+
+    const querySnapshot = async() => {
+
+      const snapshot = await getDocs(collection(db, "movies"));
+
+      let tempMovies = snapshot.docs.map(doc => {
+      
+        return { id: doc.id, ...doc.data() }
+      })
+      dispatch(setMovies(tempMovies))
+    
+
+
+    }
+      querySnapshot()
+
+
+    
+
+
+  }, [])
+
+
   return (
     <Container>
-    <ImgSlider/>
-    <Viewers/>
-    
-    <Movies/>
-    Home
-    
+      <ImgSlider />
+      <Viewers />
+
+      <Movies />
+      Home
+
     </Container>
   )
 }
@@ -35,12 +70,6 @@ const Container = styled.main`
         z-index: -1;
 
     }
-
-
-
-
-
-
 `
 
 export default Home
