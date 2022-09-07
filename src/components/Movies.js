@@ -14,7 +14,7 @@ const Movies = () => {
                 {movies &&
                     movies.map(movie => (
                         <Wrap key={movie.id}>
-                            <Link to={`/detail/${movie.id}`}>
+                            <Link to={`/disney_clone/detail/${movie.id}`}>
                                 <img src={movie.cardImg} />
                             </Link>
                         </Wrap>

@@ -21,7 +21,7 @@ const Header = () => {
                     photo: user.photoURL
                 }));
                 
-                navigate("/home");
+                navigate("/disney_clone/home");
             };
         });
     }, []);
@@ -35,7 +35,7 @@ const Header = () => {
                 email: user.email,
                 photo: user.photoURL
             }))
-            navigate("/home");
+            navigate("/disney_clone/home");
         });
     };
 
@@ -43,7 +43,7 @@ const Header = () => {
         signOut(auth)
         .then(() => {
             dispatch(setSignOut())
-            navigate("/");
+            navigate("/disney_clone/");
         });
     };
 
@@ -63,23 +63,23 @@ const Header = () => {
                             <span>Home</span>
                         </a>
                         <a>
-                            <img alt="" src="images/SEARCH-icon.svg" />
+                            <img alt="" src="images/search-icon.svg" />
                             <span>SEARCH</span>
                         </a>
                         <a>
-                            <img alt="" src="images/WATCHLIST-icon.svg" />
+                            <img alt="" src="images/watchlist-icon.svg" />
                             <span>WATCHLIST</span>
                         </a>
                         <a>
-                            <img alt="" src="images/ORIGINAL-icon.svg" />
+                            <img alt="" src="images/original-icon.svg" />
                             <span>ORIGINALS</span>
                         </a>
                         <a>
-                            <img alt="" src="images/MOVIE-icon.svg" />
+                            <img alt="" src="images/movie-icon.svg" />
                             <span>MOVIES</span>
                         </a>
                         <a>
-                            <img alt="" src="images/SERIES-icon.svg" />
+                            <img alt="" src="images/series-icon.svg" />
                             <span>SERIES</span>
                         </a>
                     </NavMenu>
