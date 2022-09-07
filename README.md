@@ -14,7 +14,9 @@ Deployed [here](https://jen-dotcom.github.io/disney_clone/).
 <br>
 
 <p align="center">
-  <video src="public\images\disneyclone.mp4"/>
+  <video src="public\images\disneyclone.mp4" controls>
+    Your browser does not support the video tag.
+  </video>
 </p>
 
 <br>
