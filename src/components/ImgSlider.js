@@ -8,10 +8,12 @@ const ImgSlider = () => {
     let settings = {
         dots: true,
         infinite: true,
-        speed: 500,
+        speed: 1000,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoPlay: true
+        autoplay: true,
+        autoplaySpeed: 2000,
+        cssEase: "linear"
     }
 
     return (
@@ -21,6 +23,9 @@ const ImgSlider = () => {
             </Wrap>
             <Wrap>
                 <img src="images/slider-badag.jpg" alt="" />
+            </Wrap>
+            <Wrap>
+                <img src="images/slider-scale.jpg" alt="" />
             </Wrap>
         </Carousel>
     );
