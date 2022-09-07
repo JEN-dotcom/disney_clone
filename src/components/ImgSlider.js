@@ -1,13 +1,10 @@
-import styled from 'styled-components'
-
-import "slick-carousel/slick/slick.css"
-
-import "slick-carousel/slick/slick-theme.css"
 import Slider from 'react-slick';
+import styled from 'styled-components';
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-const ImgSlider = () => {
-
+const ImgSlider = () => {    
     let settings = {
         dots: true,
         infinite: true,
@@ -17,26 +14,19 @@ const ImgSlider = () => {
         autoPlay: true
     }
 
+    return (
+        <Carousel {...settings}>
+            <Wrap>
+                <img src="images/slider-badging.jpg" alt="" />
+            </Wrap>
+            <Wrap>
+                <img src="images/slider-badag.jpg" alt="" />
+            </Wrap>
+        </Carousel>
+    );
+};
 
-
-
-
-
-  return (
-    <Carousel {...settings}>
-        <Wrap>
-            <img src="/images/slider-badging.jpg" alt=""/>
-        </Wrap>
-        <Wrap>
-            <img src="/images/slider-badag.jpg" alt=""/>
-        </Wrap>
-        
-    </Carousel>
-  )
-}
-
-
-const Carousel =styled(Slider)`
+const Carousel = styled(Slider)`
     margin-top: 20px;
 
     ul li button {
@@ -57,8 +47,6 @@ const Carousel =styled(Slider)`
     button {
         z-index: 1;
     }
-
-
 `
 
 const Wrap = styled.div`

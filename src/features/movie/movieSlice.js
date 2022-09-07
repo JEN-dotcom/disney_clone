@@ -2,7 +2,7 @@ import { createSlice} from '@reduxjs/toolkit'
 
 const initialState = {
     movies: []
-}
+};
 
 const movieSlice = createSlice({
     name: "movie",
@@ -12,8 +12,7 @@ const movieSlice = createSlice({
             state.movies = action.payload;
         }
     }
-
-})
+});
 
 export const { setMovies } = movieSlice.actions;
 
