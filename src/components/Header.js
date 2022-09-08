@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import styled from 'styled-components';
 import { auth, provider } from "../firebase";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 import { signInWithPopup, signOut, onAuthStateChanged } from "firebase/auth";
 import { selectUserName, selectUserPhoto, setUserLogin, setSignOut } from '../features/user/userSlice';
@@ -58,10 +58,10 @@ const Header = () => {
             ) :
                 <>
                     <NavMenu>
-                        <a>
+                        <Link to={"/disney_clone/detail/home"}>
                             <img alt="" src="images/home-icon.svg" />
-                            <span>Home</span>
-                        </a>
+                            <span>HOME</span>
+                        </Link>
                         <a>
                             <img alt="" src="images/search-icon.svg" />
                             <span>SEARCH</span>
@@ -109,11 +109,14 @@ const NavMenu = styled.div`
     margin-left: 25px;
     align-tems: center;
 
-    a {
+    a, Link {
         display: flex;
         align-Items: center;
         padding: 0 12px;
-        cursor: pointer; 
+        cursor: pointer;
+        text-decoration: none;
+        color: white;
+
 
         img {
             height: 20px;
@@ -128,14 +131,15 @@ const NavMenu = styled.div`
                 content: "";
                 height: 2px;
                 background: white;
-                position: absolute; 
                 left: 0;
                 right: 0;
                 bottom: -6px;
                 opacity: 0;
+                position: absolute;
+                transform: scaleX(0);
                 transform-origin: left center;
                 transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
-                transform: scaleX(0);
+
             }
         }
 
