@@ -58,7 +58,7 @@ const Header = () => {
             ) :
                 <>
                     <NavMenu>
-                        <Link to={"/disney_clone/detail/home"}>
+                        <Link to={"/disney_clone/home"}>
                             <img alt="" src="images/home-icon.svg" />
                             <span>HOME</span>
                         </Link>
