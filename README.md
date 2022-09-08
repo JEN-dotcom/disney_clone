@@ -13,8 +13,7 @@ Deployed [here](https://jen-dotcom.github.io/disney_clone/).
 
 <br>
 
-
-https://raw.githubusercontent.com/JEN-dotcom/disney_clone/main/public/videos/disneyclone.mp4
+https://user-images.githubusercontent.com/19980847/189140418-055ffb74-0cbe-4082-bd5d-824a18c0ecd4.mp4
 
 <br>
 
