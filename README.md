@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public\images\viewers-disney.png" width="50%"/>
+  <img src="public\images\viewers-disney.png" width="50%" style="background-color: #090b13;"/>
 </p>
 
 <br>
@@ -14,9 +14,7 @@ Deployed [here](https://jen-dotcom.github.io/disney_clone/).
 <br>
 
 <p align="center">
-  <video src="public\images\disneyclone.mp4" controls>
-    Your browser does not support the video tag.
-  </video>
+    https://github.com/JEN-dotcom/disney_clone/blob/main/public/videos/disneyclone.mp4
 </p>
 
 <br>
