@@ -1,6 +1,6 @@
-<p align="center">
-  <img src="public\images\viewers-disney.png" width="50%" style="background-color: #090b13;"/>
-</p>
+
+  <img src="public\images\viewers-disney.png" width="50%" style="background-color: #090b13" align="center"/>
+
 
 <br>
 
@@ -13,9 +13,8 @@ Deployed [here](https://jen-dotcom.github.io/disney_clone/).
 
 <br>
 
-<p align="center">
-    https://github.com/JEN-dotcom/disney_clone/blob/main/public/videos/disneyclone.mp4
-</p>
+
+https://github.com/JEN-dotcom/disney_clone/blob/main/public/videos/disneyclone.mp4
 
 <br>
 
