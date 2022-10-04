@@ -7,9 +7,9 @@
 ## Tesla-clone
 
 The Disney+ page built with react-js.
+Login functionality with firebase google auth.
 
-
-Deployed [here](https://jen-dotcom.github.io/disney_clone/).
+Deployed [here](https://jen-dotcom.github.io/disney_clone/#/disney_clone/).
 
 <br>
 
